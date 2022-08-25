@@ -16,6 +16,9 @@
 		4AED40AA28B709D70067ECBB /* TCAPracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AED40A928B709D70067ECBB /* TCAPracticeUITestsLaunchTests.swift */; };
 		4AED40B828B70E3E0067ECBB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 4AED40B728B70E3E0067ECBB /* ComposableArchitecture */; };
 		4AED40BB28B70E950067ECBB /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AED40BA28B70E950067ECBB /* CounterView.swift */; };
+		4AED40BF28B7305C0067ECBB /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AED40BE28B7305C0067ECBB /* Memo.swift */; };
+		4AED40C128B730AA0067ECBB /* MemoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AED40C028B730AA0067ECBB /* MemoClient.swift */; };
+		4AED40C328B731D90067ECBB /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AED40C228B731D90067ECBB /* MemoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		4AED40A728B709D70067ECBB /* TCAPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAPracticeUITests.swift; sourceTree = "<group>"; };
 		4AED40A928B709D70067ECBB /* TCAPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4AED40BA28B70E950067ECBB /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		4AED40BE28B7305C0067ECBB /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		4AED40C028B730AA0067ECBB /* MemoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoClient.swift; sourceTree = "<group>"; };
+		4AED40C228B731D90067ECBB /* MemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,8 @@
 		4AED408B28B709D60067ECBB /* TCAPractice */ = {
 			isa = PBXGroup;
 			children = (
+				4AED40BE28B7305C0067ECBB /* Memo.swift */,
+				4AED40C028B730AA0067ECBB /* MemoClient.swift */,
 				4AED40B928B70E8E0067ECBB /* View */,
 				4AED408C28B709D60067ECBB /* TCAPracticeApp.swift */,
 				4AED408E28B709D60067ECBB /* ContentView.swift */,
@@ -136,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				4AED40BA28B70E950067ECBB /* CounterView.swift */,
+				4AED40C228B731D90067ECBB /* MemoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,7 +287,10 @@
 			files = (
 				4AED408F28B709D60067ECBB /* ContentView.swift in Sources */,
 				4AED408D28B709D60067ECBB /* TCAPracticeApp.swift in Sources */,
+				4AED40C128B730AA0067ECBB /* MemoClient.swift in Sources */,
 				4AED40BB28B70E950067ECBB /* CounterView.swift in Sources */,
+				4AED40C328B731D90067ECBB /* MemoView.swift in Sources */,
+				4AED40BF28B7305C0067ECBB /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +452,7 @@
 				DEVELOPMENT_TEAM = D64MDUWZ72;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TCAPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -469,6 +482,7 @@
 				DEVELOPMENT_TEAM = D64MDUWZ72;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TCAPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

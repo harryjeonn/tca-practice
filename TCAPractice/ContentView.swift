@@ -10,9 +10,23 @@ import ComposableArchitecture
 
 struct ContentView: View {
     let counterStore = Store(initialState: CounterState(), reducer: counterReducer, environment: CounterEnvironment())
+    let memoStore = Store(initialState: MemoState(), reducer: memoReducer, environment: MemoEnvironment(memoClient: MemoClient.live, mainQueue: .main))
     
     var body: some View {
-        CounterView(store: counterStore)
+        
+        TabView {
+            CounterView(store: counterStore)
+                .tabItem {
+                    Image(systemName: "number.square")
+                    Text("Counter")
+                }
+            
+            MemoView(store: memoStore)
+                .tabItem {
+                    Text("Memo")
+                    Image(systemName: "note.text")
+                }
+        }
     }
 }
 
