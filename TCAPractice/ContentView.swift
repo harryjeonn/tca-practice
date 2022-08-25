@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct ContentView: View {
+    let counterStore = Store(initialState: CounterState(), reducer: counterReducer, environment: CounterEnvironment())
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        CounterView(store: counterStore)
     }
 }
 
