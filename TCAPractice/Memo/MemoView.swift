@@ -78,7 +78,7 @@ let memoReducer = Reducer<MemoState, MemoAction, MemoEnvironment> { state, actio
 
 struct MemoView: View {
     // Store는 State와 Action을 가지고 있음
-    let store: Store<MemoState, MemoAction>
+    let store = Store(initialState: MemoState(), reducer: memoReducer, environment: MemoEnvironment(memoClient: MemoClient.live, mainQueue: .main))
     
     var body: some View {
         WithViewStore(self.store) { viewStore in

@@ -9,23 +9,31 @@ import SwiftUI
 import ComposableArchitecture
 
 struct ContentView: View {
-    let counterStore = Store(initialState: CounterState(), reducer: counterReducer, environment: CounterEnvironment())
-    let memoStore = Store(initialState: MemoState(), reducer: memoReducer, environment: MemoEnvironment(memoClient: MemoClient.live, mainQueue: .main))
+    @State var selection: Int = 2
     
     var body: some View {
         
-        TabView {
-            CounterView(store: counterStore)
+        TabView(selection: $selection) {
+            CounterView()
                 .tabItem {
                     Image(systemName: "number.square")
                     Text("Counter")
                 }
+                .tag(0)
             
-            MemoView(store: memoStore)
+            MemoView()
                 .tabItem {
                     Text("Memo")
                     Image(systemName: "note.text")
                 }
+                .tag(1)
+            
+            TodoView()
+                .tabItem {
+                    Text("Todo")
+                    Image(systemName: "calendar")
+                }
+                .tag(2)
         }
     }
 }

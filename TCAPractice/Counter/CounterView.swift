@@ -37,7 +37,7 @@ let counterReducer = Reducer<CounterState, CounterAction, CounterEnvironment> { 
 
 struct CounterView: View {
     // Store는 State와 Action을 가지고 있음
-    let store: Store<CounterState, CounterAction>
+    let store = Store(initialState: CounterState(), reducer: counterReducer, environment: CounterEnvironment())
     
     var body: some View {
         WithViewStore(self.store) { viewStore in
